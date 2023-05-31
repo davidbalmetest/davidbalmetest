@@ -1,0 +1,9 @@
+{
+	"name": "DavidBalmeTest",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8224caa6-8e8a-43c9-8d04-b40f5eefadca",
+		"tenantId": "6a00e5a6-09a0-4018-b35b-9db2b764aeb1"
+	}
+}
