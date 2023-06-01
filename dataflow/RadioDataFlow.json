@@ -5,14 +5,39 @@
 		"typeProperties": {
 			"sources": [
 				{
+					"dataset": {
+						"referenceName": "Json1",
+						"type": "DatasetReference"
+					},
 					"name": "myRadioDataFlow"
 				}
 			],
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
-				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> myRadioDataFlow"
+				"source(output(",
+				"          ts as integer,",
+				"          userId as string,",
+				"          sessionId as integer,",
+				"          page as string,",
+				"          auth as string,",
+				"          method as string,",
+				"          status as integer,",
+				"          level as string,",
+				"          itemInSession as integer,",
+				"          location as string,",
+				"          lastName as string,",
+				"          firstName as string,",
+				"          registration as integer,",
+				"          gender as string,",
+				"          artist as string,",
+				"          song as string,",
+				"          length as double",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     documentForm: 'documentPerLine') ~> myRadioDataFlow"
 			]
 		}
 	}
